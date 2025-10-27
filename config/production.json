@@ -1,0 +1,66 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "cors": {
+      "origin": ["https://yourdomain.com"],
+      "credentials": true
+    }
+  },
+  "redis": {
+    "url": "redis://redis:6379",
+    "ttl": 3600,
+    "maxRetries": 5
+  },
+  "scraper": {
+    "baseUrl": "https://www.shidianguji.com",
+    "timeout": 30000,
+    "retries": 5,
+    "delay": 2000,
+    "searchUrlTemplate": "https://www.shidianguji.com/search/{keywords}?page_from=home_page&bookName={bookName}&author={author}&source=PC"
+  },
+  "antiCrawling": {
+    "maxConcurrentRequests": 2,
+    "requestsPerSecond": 1,
+    "requestDelay": 2000,
+    "burstLimit": 3,
+    "maxSearchResults": 1000,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Connection": "keep-alive",
+      "Upgrade-Insecure-Requests": "1"
+    }
+  },
+  "cache": {
+    "memory": {
+      "maxSize": 200,
+      "ttl": 600
+    },
+    "redis": {
+      "ttl": 7200
+    },
+    "search": {
+      "ttl": 7200
+    }
+  },
+  "logging": {
+    "level": "info",
+    "file": {
+      "enabled": true,
+      "path": "logs",
+      "maxSize": "50m",
+      "maxFiles": 10
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "port": 9090,
+    "metrics": {
+      "enabled": true,
+      "path": "/metrics"
+    }
+  }
+}

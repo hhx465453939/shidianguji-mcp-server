@@ -1,0 +1,61 @@
+# 依赖目录
+node_modules
+npm-debug.log*
+
+# 测试文件
+tests
+coverage
+*.test.ts
+*.spec.ts
+
+# 开发文件
+.env
+.env.local
+.env.development
+.env.test
+
+# 日志文件
+logs
+*.log
+
+# 缓存目录
+guji-cache
+.cache
+
+# Git
+.git
+.gitignore
+
+# 文档
+README.md
+docs
+*.md
+
+# 编辑器配置
+.vscode
+.idea
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+tmp
+temp
+*.tmp
+
+# 构建产物
+dist
+build
+
+# Docker文件
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 其他配置文件
+.eslintrc.js
+.prettierrc
+jest.config.js
